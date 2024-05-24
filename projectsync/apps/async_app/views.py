@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
+from django.http import HttpResponse
 # Local Imports
 from async_app.models import Share, SharePriceUpdate, Task
 from .serializers import ShareSerializer, SharePriceUpdateSerializer, TaskSerializer
@@ -16,6 +16,9 @@ from .serializers import ShareSerializer, SharePriceUpdateSerializer, TaskSerial
 from django.utils import timezone
 from django.db import transaction
 
+
+def home(request):
+    return HttpResponse("hello")
 
 # API View to create shares data
 class CreateSharesDataAPIView(APIView):
