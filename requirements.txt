@@ -12,7 +12,6 @@ click-repl==0.3.0
 Django==4.2.13
 django-rest-framework==0.1.0
 djangorestframework==3.15.1
-kombu==5.3.6
 pkg_resources==0.0.0
 prompt-toolkit==3.0.43
 psycopg2-binary==2.9.9
