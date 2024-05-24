@@ -25,10 +25,11 @@ jobs:
     - name: Install Dependencies
       run: |
         cd 
-        cd /var/www
-        mkdir poonam
-        python -m pip install --upgrade pip
+        cd /var/www/flask-app
+        source env/bin/activate
         pip install -r requirements.txt
+        python3 manage.py makemigrations
+        python3 manage.py migrate
     - name: Run Tests
       run: |
         python3 manage.py test async_app.tests.ShareViewSetTestCase
